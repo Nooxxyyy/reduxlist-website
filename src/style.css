@@ -1,0 +1,232 @@
+/* Base styles */
+:root {
+    --primary: #e63946;
+    --dark: #303030;
+    --light: #f1faee;
+    --accent: #457b9d;
+    --background: #0a0a0a;
+    --tag-majestic: #e63946;
+    --tag-gta5rp: #ff7a2f;
+    --tag-fpsboost: #00ffb3;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', system-ui, sans-serif;
+    text-decoration: none;
+    user-select: var(--primary);
+  }
+
+  ::selection {
+    background: var(--primary);
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--light);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  .header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('../images/gta5-bg.jpg');
+    background-size: cover;
+    background-position: top;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .header__content {
+    width: 100%;
+  }
+  
+  .header__title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  .header__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Tags */
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .tag--majestic {
+    border: 2px solid var(--tag-majestic);
+    color: var(--tag-majestic);
+  }
+  
+  .tag--gta5rp {
+    border: 2px solid var(--tag-gta5rp);
+    color: var(--tag-gta5rp);
+  }
+
+  .tag--fpsboost {
+    border: 2px solid var(--tag-fpsboost);
+    color: var(--tag-fpsboost);
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: var(--light);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+  }
+  
+  /* Mods section */
+  .mods {
+    padding: 4rem 0;
+  }
+  
+  .mods__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .mod-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .mod-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .mod-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .mod-card__title {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .mod-card__description {
+    margin-bottom: 1.5rem;
+  }
+  
+  .download-count {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: var(--accent);
+  }
+  
+  /* Installation steps */
+  .steps {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 4rem 0;
+  }
+  
+  .steps__list {
+    list-style: none;
+    counter-reset: steps;
+  }
+  
+  .step {
+    position: relative;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    counter-increment: steps;
+  }
+  
+  .step::before {
+    content: counter(steps);
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--dark);
+  }
+
+  .footer p:nth-child(1) a {
+    color: var(--primary);
+  }
+
+  .footer p:nth-child(3) a {
+    color: var(--primary);
+  }
+  
+  /* Suggest */
+  .suggest {
+    background: rgba(255, 255, 255, 0.02);
+    background-size: cover;
+    background-position: top;
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header__title {
+      font-size: 2.5rem;
+    }
+    
+    .header__subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .mods__grid {
+      grid-template-columns: 1fr;
+    }
+  }

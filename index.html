@@ -1,1 +1,100 @@
-<div>reduxlist</div>
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ReduxList</title>
+        <link rel="stylesheet" href="src/style.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="container header__content">
+            <h1 class="header__title">ReduxList</h1>
+            <p class="header__subtitle">Тут ты найдешь себе редукс по душе!</p>
+            <a href="#mods" class="btn">Начать установку</a>
+        </div>
+    </header>
+
+    <section id="mods" class="mods">
+        <div class="container">
+            <h2>Доступные модификации</h2>
+            <div class="mods__grid">
+                <div class="mod-card">
+                    <img src="/images/mad-redux.jpg" alt="Mad Redux" class="mod-card__image">
+                    <div class="tags">
+                        <span class="tag tag--majestic">Majestic</span>
+                        <span class="tag tag--fpsboost">FPS Boost</span>
+                    </div>
+                    <h3 class="mod-card__title">Mad Redux v2.0</h3>
+                    <p class="mod-card__description">Улучшенная графика, FPS Boost, кастомные звуки оружия и так далее.</p>
+                    <a href="https://www.mediafire.com/file/555ccm82d9ip9mh/MAD_REDUX_v2.0.zip/file" class="btn download-btn" data-mod="redux">Скачать [Majestic]</a>
+                    <div class="download-count">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                        <span id="redux-downloads">Счетчик</span> загрузок пока-что не работает
+                    </div>
+                </div>
+                <div class="mod-card">
+                    <img src="/images/dark-redux-gosha.jpg" alt="DarkRedux" class="mod-card__image">
+                    <div class="tags">
+                        <span class="tag tag--gta5rp">GTA5RP</span>
+                        <span class="tag tag--fpsboost">FPS Boost</span>
+                    </div>
+                    <h3 class="mod-card__title">Dark Redux by Gosha</h3>
+                    <p class="mod-card__description">Хороший редукс для слабых пк с Ultra FPS Boost и улучшенной графикой.</p>
+                    <a href="https://www.mediafire.com/file/wcaw6btqks4xi5a/Dark_Redux_by_Gosha_v5.rar/file" class="btn download-btn" data-mod="gta5rp">Скачать [GTA5RP]</a>
+                    <div class="download-count">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                        </svg>
+                        <span id="gta5rp-downloads">Счетчик</span> загрузок пока-что не работает
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <h2>Инструкция по установке</h2>
+            <ol class="steps__list">
+                <li class="step">
+                    <h3>Подготовка</h3>
+                    <p>Убедитесь, что у вас установлена чистая версия GTA 5</p>
+                </li>
+                <li class="step">
+                    <h3>Скачивание</h3>
+                    <p>Загрузите необходимые файлы модификации</p>
+                </li>
+                <li class="step">
+                    <h3>Установка</h3>
+                    <p>Перекиньте файлы с архива "update, x64" в папку где у вас установлена GTA 5</p>
+                </li>
+                <li class="step">
+                    <h3>Готово!</h3>
+                    <p>Наслаждайтесь вашим новым редуксом!</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="suggest">
+        <div class="container header__content">
+            <h1 class="header__title">Предложи редукс!</h1>
+            <p class="header__subtitle">Предложи какой редукс добавить на сайт через бота в Telegram</p>
+            <a href="https://t.me/reduxlistbot" class="btn">Предложить</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>2024 ReduxList | <a href="https://github.com/Nooxxyyy/reduxlist-website">GitHub</a> | <a href="https://t.me/reduxlist">Telegram</a></p>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
